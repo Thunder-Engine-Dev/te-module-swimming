@@ -51,7 +51,7 @@ func _movement_swim(delta: float) -> void:
 	if Input.is_action_just_pressed(player.config.control_jump) && player.states.current_state != "crouch":
 		player.velocity_local.y = -swim_velocity
 		player.states.jump_buffer = false
-		Audio.play_sound(player.config.jump_sound, player, true, {pitch = player.config.sound_pitch})
+		Audio.play_sound(player.config.swim_sound, player, true, {pitch = player.config.sound_pitch})
 	
 	# Generic fall velocity, acceleration and deceleration
 	player._movement_generic(delta)
